@@ -38,7 +38,8 @@ def menu
     puts "Enter your choice"
     puts "a) Convert to USD"
     puts "b) Convert to EUR"
-    puts "c) Convert to INR"
+    puts "c) Convert to AUD"
+    puts "d) Convert to INR"
     puts "q) Quit"
     print "Action: "
     choice = gets.chomp.downcase
@@ -51,7 +52,8 @@ def menu
       case choice
       when 'a' then sub_menu(manager, 'USD')
       when 'b' then sub_menu(manager, 'EUR')
-      when 'c' then sub_menu(manager, 'INR')
+      when 'c' then sub_menu(manager, 'AUD')
+      when 'd' then sub_menu(manager, 'INR')
       else puts "invalid selection !!"
       end
     end

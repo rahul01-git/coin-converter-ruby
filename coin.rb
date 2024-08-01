@@ -1,6 +1,6 @@
 class Coin 
-  attr_accessor :symbol, :USD, :EUR
-  def initialize(symbol, usd, eur)
-    @symbol, @USD , @EUR = symbol, usd , eur
+  attr_accessor :symbol, :USD, :EUR, :INR
+  def initialize(symbol, usd, eur, inr)
+    @symbol, @USD , @EUR, @INR = symbol, usd , eur, inr
   end
 end

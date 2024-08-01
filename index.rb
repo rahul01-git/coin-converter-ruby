@@ -6,8 +6,8 @@ def clear_screen
 end
 
 def sub_menu(manager, to)
-  coin_list = manager.coin_list
   clear_screen
+  coin_list = manager.coin_list
   puts "Available Coins".center(50, ' ')
   puts
   puts coin_list.join(', ').center(50, '-')
@@ -20,7 +20,7 @@ def sub_menu(manager, to)
     result = manager.calculate(amount,symbol, to)
     puts " #{amount} #{symbol}  = #{result} #{to} ".center(50, '-')
   else
-    puts "#{symbol} is not available".center(50,'*')
+    puts " #{symbol} is not available ".center(50,'*')
   end
 
   puts 
@@ -38,6 +38,7 @@ def menu
     puts "Enter your choice"
     puts "a) Convert to USD"
     puts "b) Convert to EUR"
+    puts "c) Convert to INR"
     puts "q) Quit"
     print "Action: "
     choice = gets.chomp.downcase
@@ -50,6 +51,7 @@ def menu
       case choice
       when 'a' then sub_menu(manager, 'USD')
       when 'b' then sub_menu(manager, 'EUR')
+      when 'c' then sub_menu(manager, 'INR')
       else puts "invalid selection !!"
       end
     end
